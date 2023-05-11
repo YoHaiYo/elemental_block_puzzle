@@ -73,7 +73,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
     return GridView.builder(
       controller: scrollController,
       gridDelegate: delegate(),
-      itemCount: 64,
+      itemCount: 16,
       itemBuilder: (context, index) {
 
         /// GestureDetector : 드래그, 꾹 누르기 등등 왠만한거 다 씀
@@ -103,7 +103,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
 
   SliverGridDelegate delegate() {
     return const SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 8,
+      crossAxisCount: 4,
 
       /// 기준축과 교차축의 아이템 사이즈 비율
       /// 1 : 기준축, 교차축 동일
@@ -111,11 +111,11 @@ class _GridViewScreenState extends State<GridViewScreen> {
       /// 2 : 교차축이 기준축의 2배
       /// 기기별 사이즈 다양한.
       childAspectRatio: 0.7,
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
+      crossAxisSpacing: 5,
+      mainAxisSpacing: 5,
 
       /// 메인축의 사이즈 설정
-      mainAxisExtent: 40,
+      mainAxisExtent: 80,
     );
   }
 
@@ -134,6 +134,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
   Widget item() {
     return Container(
       color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+
     );
   }
 }

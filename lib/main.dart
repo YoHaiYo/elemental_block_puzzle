@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'grid.dart';
-
 void main() {
   runApp(DragAndDropApp());
 }
@@ -11,15 +9,15 @@ class DragAndDropApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // appBar: AppBar(
-        //   title: Text('Drag and Drop'),
-        // ),
-        body: GridViewScreen(),
+        appBar: AppBar(
+          title: Text('Drag and Drop'),
+        ),
+        body: DragAndDropScreen(),
       ),
     );
   }
 }
-
+//
 class DragAndDropScreen extends StatefulWidget {
   @override
   _DragAndDropScreenState createState() => _DragAndDropScreenState();
@@ -27,12 +25,6 @@ class DragAndDropScreen extends StatefulWidget {
 
 class _DragAndDropScreenState extends State<DragAndDropScreen> {
   bool isBlockDropped = false;
-
-  void resetBlockColor() {
-    setState(() {
-      isBlockDropped = false;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,23 +38,15 @@ class _DragAndDropScreenState extends State<DragAndDropScreen> {
           },
         ),
         Positioned(
-          left: 200,
-          top: 200,
+          left: 15,
+          top: 15,
           child: Container(
-            width: 100,
-            height: 100,
+            width: 75,
+            height: 75,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black, width: 2),
-              color: isBlockDropped ? Colors.green : Colors.transparent,
+              color: isBlockDropped ? Colors.deepOrange : Colors.transparent,
             ),
-          ),
-        ),
-        Positioned(
-          bottom: 20,
-          right: 20,
-          child: ElevatedButton(
-            onPressed: resetBlockColor,
-            child: Text('Reset'),
           ),
         ),
       ],
