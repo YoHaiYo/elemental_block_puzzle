@@ -1,26 +1,13 @@
 import 'package:flutter/material.dart';
 
+
 const List<Item> _items = [
   Item(
-    name: 'Spinach Pizza',
-    totalPriceCents: 1299,
+    name: '블록대기창',
+    totalPriceCents: 100,
+    // uid 일마는 뭐하는건지 아직 파악못함.
     uid: '1',
-    imageProvider: NetworkImage('https://flutter'
-        '.dev/docs/cookbook/img-files/effects/split-check/Food1.jpg'),
-  ),
-  Item(
-    name: 'Veggie Delight',
-    totalPriceCents: 799,
-    uid: '2',
-    imageProvider: NetworkImage('https://flutter'
-        '.dev/docs/cookbook/img-files/effects/split-check/Food2.jpg'),
-  ),
-  Item(
-    name: 'Chicken Parmesan',
-    totalPriceCents: 1499,
-    uid: '3',
-    imageProvider: NetworkImage('https://flutter'
-        '.dev/docs/cookbook/img-files/effects/split-check/Food3.jpg'),
+    imageProvider: NetworkImage('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmzT7a%2FbtsffvLgsaw%2FRxL7rg3EtKqWFQaJkcTWu0%2Fimg.png'),
   ),
 ];
 
@@ -103,7 +90,7 @@ class _ElementalPuzzleState extends State<ElementalPuzzle>
     );
   }
 
-  /// 메뉴판 구현
+  /// 블록대기창(메뉴판) 구현
   Widget _buildMenuList() {
     return ListView.separated(
       padding: const EdgeInsets.all(16.0),
@@ -202,6 +189,7 @@ class CustomerCart extends StatelessWidget {
       child: Material(
         elevation: highlighted ? 8.0 : 4.0,
         borderRadius: BorderRadius.circular(10.0),
+        /// 드래그 올려놨을때 색상 , 평상시 색상
         color: highlighted ? const Color(0xFF0968F6) : Colors.white,
         child: Padding(
           padding: const EdgeInsets.symmetric(

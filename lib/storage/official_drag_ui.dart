@@ -34,14 +34,14 @@ const List<Item> _items = [
 ];
 
 @immutable
-class ExampleDragAndDrop extends StatefulWidget {
-  const ExampleDragAndDrop({super.key});
+class OfficialFoodOrder extends StatefulWidget {
+  const OfficialFoodOrder({super.key});
 
   @override
-  State<ExampleDragAndDrop> createState() => _ExampleDragAndDropState();
+  State<OfficialFoodOrder> createState() => _OfficialFoodOrderState();
 }
 
-class _ExampleDragAndDropState extends State<ExampleDragAndDrop>
+class _OfficialFoodOrderState extends State<OfficialFoodOrder>
 
     with TickerProviderStateMixin {
   final List<Customer> _people = [

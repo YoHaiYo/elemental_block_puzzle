@@ -1,7 +1,8 @@
 import 'package:elemental_block_puzzle/trying/testing.dart';
 import 'package:flutter/material.dart';
 
-import 'official_drag_ui.dart';
+import 'home_screen.dart';
+
 
 void main() {
   // runApp : 앱을 실행 시키기 위해서 호출하는 함수
@@ -19,10 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Elemental Puzzle'),
-        ),
-        body: ElementalPuzzle(),
+        body: HomeScreen(),
       ),
     );
   }
