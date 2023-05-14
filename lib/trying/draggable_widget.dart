@@ -23,6 +23,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Draggable(
+              /// 드롭되고 보여줄 색상
                 data: Colors.orangeAccent,
                 child: Container(
                   width: 100,
@@ -51,6 +52,8 @@ class _DraggableWidgetState extends State<DraggableWidget> {
                   ),
                 )),
             DragTarget(
+              /// onAccept: 드롭했을때 발생할 이벤트 표시.
+              /// 여기선 originColor가 Draggable 위젯의 data 색상을 받아옴.
               onAccept: (Color color){
                 originColor = color;
               },
@@ -62,6 +65,7 @@ class _DraggableWidgetState extends State<DraggableWidget> {
                 return Container(
                   width: 200,
                   height: 200,
+                  /// DragTarget에 드롭되기 전에 비어있는(isEmpty) 상태에서 보여줄 색상 지정
                   color: accepted.isEmpty ? originColor : Colors.grey.shade200,
                   child: const Center(
                     child: Text("Drag Here"),

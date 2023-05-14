@@ -2,6 +2,7 @@
 //stf : statefull 위젯 생성 단축키
 
 import 'package:elemental_block_puzzle/storage/physics_card_drag_demo.dart';
+import 'package:elemental_block_puzzle/trying/draggable_shaping.dart';
 import 'package:elemental_block_puzzle/trying/draggable_widget.dart';
 import 'package:elemental_block_puzzle/trying/drop_tracker.dart';
 import 'package:flutter/cupertino.dart';
@@ -34,7 +35,10 @@ class HomeScreen extends StatelessWidget {
                 page: ElementalPuzzle()),
             /// 참고 원본파일
 
-
+            button1(
+                context: context,
+                text: "DraggableShaping",
+                page: DraggableShaping()),
             button1(
                 context: context,
                 text: "DraggableWidget",
