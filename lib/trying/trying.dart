@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 
+/// 블럭 대기 창 리스트
 const List<Item> _items = [
   Item(
     name: '블록대기창',
@@ -22,6 +23,7 @@ class ElementalPuzzle extends StatefulWidget {
 class _ElementalPuzzleState extends State<ElementalPuzzle>
     with TickerProviderStateMixin {
 
+  /// 블럭 놓을 창 리스트
   final List<Customer> _people = [
 
     Customer(
@@ -173,11 +175,13 @@ class CustomerCart extends StatelessWidget {
     required this.customer,
     this.highlighted = false,
     this.hasItems = false,
+
   });
 
   final Customer customer;
   final bool highlighted;
   final bool hasItems;
+
 
   /// 구매자 화면 구성
   @override
@@ -199,7 +203,9 @@ class CustomerCart extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ClipOval(
+              //원래 ClipOval : 둥글둥글
+              /// 이미지 들어갈 컨테이너
+              Container(
                 child: SizedBox(
                   width: 46,
                   height: 46,
@@ -209,7 +215,7 @@ class CustomerCart extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 8.0),
+              const SizedBox(height: 2.0),
               Text(
                 customer.name,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -255,6 +261,8 @@ class CustomerCart extends StatelessWidget {
     );
   }
 }
+
+
 
 class MenuListItem extends StatelessWidget {
   const MenuListItem({

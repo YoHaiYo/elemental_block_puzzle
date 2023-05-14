@@ -1,6 +1,9 @@
 //stl : stateless 위젯 생성 단축키
 //stf : statefull 위젯 생성 단축키
 
+import 'package:elemental_block_puzzle/storage/physics_card_drag_demo.dart';
+import 'package:elemental_block_puzzle/trying/draggable_widget.dart';
+import 'package:elemental_block_puzzle/trying/drop_tracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +12,7 @@ import 'storage/click_puzzle.dart';
 import 'storage/drag_n_drag_color_change.dart';
 import 'storage/grid.dart';
 import 'storage/official_drag_ui.dart';
-import 'trying/testing.dart';
+import 'trying/trying.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,13 +32,27 @@ class HomeScreen extends StatelessWidget {
                 context: context,
                 text: "ElementalPuzzle",
                 page: ElementalPuzzle()),
-            /// 원본파일
+            /// 참고 원본파일
+
+
+            button1(
+                context: context,
+                text: "DraggableWidget",
+                page: DraggableWidget()),
+            button1(
+                context: context,
+                text: "DropTracker",
+                page: DropTracker()),
             button1(
                 context: context,
                 text: "OfficialFoodOrder",
                 page: OfficialFoodOrder()),
 
-            /// 참고파일
+            /// 참고 기타파일
+            button3(
+                context: context,
+                text: "PhysicsCardDragDemo",
+                page: PhysicsCardDragDemo()),
 
             button3(
                 context: context,
