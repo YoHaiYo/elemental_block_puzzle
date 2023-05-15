@@ -13,7 +13,7 @@ class DraggableShaping extends StatefulWidget {
 
 class _DraggableShapingState extends State<DraggableShaping> {
   /// 변수 정의
-  Color originColor = Colors.red; // 드래그타켓 블록 시작 색상
+  Color originColor = Colors.black26; // 드래그타켓 블록 시작 색상
   Color firstColor = Colors.orangeAccent; // 드래그할 블록 색상 & 드래그되고 바뀔 색상
   String moveBlockText = "Box";
   
@@ -91,7 +91,7 @@ class _DraggableShapingState extends State<DraggableShaping> {
   double targetBlockHeight = 50;
   double targetBlockPadding = 2;
   String targetBlockText = "Drag Here";
-  Color targetBlockShade = Colors.grey.shade200;
+  Color targetBlockShade = Colors.orange.shade200;
 
 
   /// 블록 종류 만들기
